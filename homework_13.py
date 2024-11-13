@@ -84,3 +84,12 @@ if __name__ == "__main__":
     cipher = CaesarsCipher()
     decrypted_message = cipher.decrypt(message, key)
     print(f"Расшифрованное сообщение: {decrypted_message}")
+
+    # Запрашиваем путь к файлу у пользователя
+    file_path = input("Введите путь к файлу для записи: ")
+
+    # Записываем расшифрованное сообщение в файл
+    with open(file_path, "w") as file:
+        file.write(decrypted_message)
+
+print(f"Сообщение записано в файл: {file_path}")
